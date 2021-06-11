@@ -1,4 +1,5 @@
 import 'package:ecommerce/routes.dart';
+import 'package:ecommerce/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Ecommerce',
       debugShowCheckedModeBanner: false,
+      theme: theme(),
       initialRoute: "/",
       getPages: routes(),
     );
