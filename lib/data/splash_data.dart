@@ -1,6 +1,6 @@
 import 'package:ecommerce/models/splash_model.dart';
 
-List<SplashModel> splashData = [
+List splashData = [
   SplashModel(
       text: "Welcome to SkyWaker, Let’s shop!",
       image: "assets/images/splash_1.png"),
