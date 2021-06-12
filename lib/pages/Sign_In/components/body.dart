@@ -1,5 +1,4 @@
-import 'package:ecommerce/pages/SignIn/components/sign_up_from.dart';
-import 'package:ecommerce/utils/constants.dart';
+import 'package:ecommerce/pages/Sign_In/components/sign_in_from.dart';
 import 'package:ecommerce/utils/size_config.dart';
 import 'package:ecommerce/widgets/socal_card.dart';
 import 'package:flutter/material.dart';
@@ -36,15 +35,15 @@ class Body extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SocalCard(
-                      icon: "assets/icons/google-icon.svg",
+                      icon: 'assets/icons/google-icon.svg',
                       press: () {},
                     ),
                     SocalCard(
-                      icon: "assets/icons/facebook-2.svg",
+                      icon: 'assets/icons/facebook-2.svg',
                       press: () {},
                     ),
                     SocalCard(
-                      icon: "assets/icons/twitter.svg",
+                      icon: 'assets/icons/twitter.svg',
                       press: () {},
                     ),
                   ],

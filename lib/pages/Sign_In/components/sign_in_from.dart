@@ -1,11 +1,13 @@
-import 'dart:isolate';
-
+import 'package:ecommerce/hepler/keyboard.dart';
+import 'package:ecommerce/pages/Forgot_password/forgot_password.dart';
+import 'package:ecommerce/pages/Login_Success/login_success.dart';
 import 'package:ecommerce/utils/constants.dart';
 import 'package:ecommerce/utils/size_config.dart';
 import 'package:ecommerce/widgets/custom_surffixIcon.dart';
-import 'package:ecommerce/widgets/default_button.dart';
+import 'package:ecommerce/widgets/default_button_F.dart';
 import 'package:ecommerce/widgets/form_error.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignForm extends StatefulWidget {
   @override
@@ -57,8 +59,7 @@ class _SignFormState extends State<SignForm> {
               Text("Remember me"),
               Spacer(),
               GestureDetector(
-                // onTap: () => Navigator.pushNamed(
-                //     context, ForgotPasswordScreen.routeName),
+                onTap: () => Get.to(ForgotPassword()),
                 child: Text(
                   "Forgot Password",
                   style: TextStyle(decoration: TextDecoration.underline),
@@ -68,17 +69,17 @@ class _SignFormState extends State<SignForm> {
           ),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
-          // DefaultButton(
-          //   text: "Continue",
-          //   press: () {
-          //     if (_formKey.currentState.validate()) {
-          //       _formKey.currentState.save();
-          //       // if all are valid then go to success screen
-          //       KeyboardUtil.hideKeyboard(context);
-          //       Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-          //     }
-          //   },
-          // ),
+          DefaultButtonF(
+            text: "Continue",
+            press: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                KeyboardUtil.hideKeyboard(context);
+
+                Get.to(LoginSuccessScreen());
+              }
+            },
+          ),
         ],
       ),
     );
@@ -100,7 +101,7 @@ class _SignFormState extends State<SignForm> {
         if (value!.isEmpty) {
           addError(error: kPassNullError);
           return "";
-        } else if (value!.length < 8) {
+        } else if (value.length < 8) {
           addError(error: kShortPassError);
           return "";
         }
