@@ -4,6 +4,7 @@ import 'package:ecommerce/pages/OnBoarding/intro_screen.dart';
 import 'package:ecommerce/pages/SignUp/sign_up.dart';
 import 'package:ecommerce/pages/Sign_In/Sign_In_Screen.dart';
 import 'package:ecommerce/pages/home/home_screen.dart';
+import 'package:ecommerce/pages/otp/otp_screen.dart';
 import 'package:get/get.dart';
 
 routes() => [
@@ -12,5 +13,6 @@ routes() => [
   GetPage(name: "/sign_up", page:() => SignUpScreen()),
   GetPage(name: "/log_in_success", page:() => LoginSuccessScreen()),
   GetPage(name: "/forget_password", page:() => ForgotPassword()),
+  GetPage(name: "/otp", page:() => OtpScreen()),
   GetPage(name: "/home", page:() => Home()),
 ];
