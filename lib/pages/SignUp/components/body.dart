@@ -1,56 +1,54 @@
-import 'package:ecommerce/pages/Sign_In/components/sign_in_from.dart';
+import 'package:ecommerce/pages/SignUp/components/Sign_up_form.dart';
+import 'package:ecommerce/utils/constants.dart';
 import 'package:ecommerce/utils/size_config.dart';
-import 'package:ecommerce/widgets/no_account_text.dart';
 import 'package:ecommerce/widgets/socal_card.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
+  const Body({ Key? key }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SizedBox(
+      child: SizedBox(  
         width: double.infinity,
-        child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SingleChildScrollView(
-            child: Column(
+        child: Padding(  
+          padding:  EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          child: SingleChildScrollView(  
+            child: Column(  
               children: [
-                SizedBox(height: SizeConfig.screenHeight! * 0.04),
+                 SizedBox(height: SizeConfig.screenHeight! * 0.04), // 4%
+                Text("Register Account", style: headingStyle),
                 Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: getProportionateScreenWidth(28),
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  "Sign in with your email and password  \nor continue with social media",
+                  "Complete your details or continue \nwith social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight! * 0.08),
-                SignForm(),
+                SignUpForm(),
                 SizedBox(height: SizeConfig.screenHeight! * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SocalCard(
-                      icon: 'assets/icons/google-icon.svg',
+                      icon: "assets/icons/google-icon.svg",
                       press: () {},
                     ),
                     SocalCard(
-                      icon: 'assets/icons/facebook-2.svg',
+                      icon: "assets/icons/facebook-2.svg",
                       press: () {},
                     ),
                     SocalCard(
-                      icon: 'assets/icons/twitter.svg',
+                      icon: "assets/icons/twitter.svg",
                       press: () {},
                     ),
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
-                NoAccountText(),
+                Text(
+                  'By continuing your confirm that you agree \nwith our Term and Condition',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.caption,
+                )
               ],
             ),
           ),
