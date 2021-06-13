@@ -1,4 +1,3 @@
-import 'package:ecommerce/models/category_model.dart';
 import 'package:ecommerce/models/special_product_model.dart';
 
 List specialdata = [
