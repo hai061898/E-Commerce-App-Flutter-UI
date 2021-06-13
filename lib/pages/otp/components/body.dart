@@ -6,6 +6,7 @@ import 'otp_form.dart';
 
 
 class Body extends StatelessWidget {
+
   const Body({Key? key}) : super(key: key);
 
   @override
@@ -45,6 +46,7 @@ class Body extends StatelessWidget {
 
  
   Row buildTimer() {
+   
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
