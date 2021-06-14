@@ -18,11 +18,13 @@ class ProfileMenu extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextButton(
+        
         style: TextButton.styleFrom(
           padding: EdgeInsets.all(20),
+          backgroundColor: Color(0xFFF5F6F9),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          primary: Color(0xFFF5F6F9),
+          // primary: Color(0xFFF5F6F9),
         ),
         onPressed: () {},
         child: Row(children: [
@@ -32,7 +34,7 @@ class ProfileMenu extends StatelessWidget {
             width: 22,
           ),
           SizedBox(width: 20),
-          Expanded(child: Text(text)),
+          Expanded(child: Text(text, style: TextStyle(color: Colors.black),)),
           Icon(Icons.arrow_forward_ios),
         ]),
       ),
