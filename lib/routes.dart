@@ -4,6 +4,7 @@ import 'package:ecommerce/pages/OnBoarding/intro_screen.dart';
 import 'package:ecommerce/pages/Profile/profile.dart';
 import 'package:ecommerce/pages/SignUp/sign_up.dart';
 import 'package:ecommerce/pages/Sign_In/Sign_In_Screen.dart';
+import 'package:ecommerce/pages/cart/cart_screen.dart';
 import 'package:ecommerce/pages/detail/detail_screen.dart';
 import 'package:ecommerce/pages/home/home_screen.dart';
 import 'package:ecommerce/pages/otp/otp_screen.dart';
@@ -18,5 +19,6 @@ routes() => [
   GetPage(name: "/otp", page:() => OtpScreen()),
   GetPage(name: "/home", page:() => Home()),
   GetPage(name: "/detail", page:() => DetailScreen()),
+  GetPage(name: "/cart", page:() => CartScreen()),
   GetPage(name: "/profile", page:() => Profile()),
 ];
